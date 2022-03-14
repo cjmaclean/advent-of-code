@@ -1,3 +1,4 @@
 The day 2 programs are written in python 3.
 Commands:
 python puzzle-2.py day-2-example-input.txt
+python puzzle-2.py day-2-input.txt

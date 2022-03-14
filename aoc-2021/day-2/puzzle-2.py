@@ -16,7 +16,7 @@ for line in lines:
     # print(words)
     command_name = words[0]
     command_amount = int(words[1])
-    print(command_name, command_amount)
+    # print(command_name, command_amount)
     if command_name == "forward":
         horizontal_position += command_amount
     elif command_name == "down":
@@ -25,7 +25,7 @@ for line in lines:
         depth -= command_amount
     else:
         print("unknown command ", command_name)
-    print(horizontal_position, depth)
+    # print(horizontal_position, depth)
 
 
 print("Result:")
