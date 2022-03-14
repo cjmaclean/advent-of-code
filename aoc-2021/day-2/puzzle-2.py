@@ -8,6 +8,7 @@ lines = file.readlines()
 
 horizontal_position = 0
 depth = 0
+aim = 0
 
 for line in lines:
     # read command and adjust position
@@ -19,13 +20,14 @@ for line in lines:
     # print(command_name, command_amount)
     if command_name == "forward":
         horizontal_position += command_amount
+        depth += aim * command_amount
     elif command_name == "down":
-        depth += command_amount
+        aim += command_amount
     elif command_name == "up":
-        depth -= command_amount
+        aim -= command_amount
     else:
         print("unknown command ", command_name)
-    # print(horizontal_position, depth)
+    print(horizontal_position, depth, aim)
 
 
 print("Result:")
