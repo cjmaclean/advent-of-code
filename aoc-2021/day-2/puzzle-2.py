@@ -13,10 +13,19 @@ for line in lines:
     # read command and adjust position
     # print(line)
     words = line.split()
-    print(words)
+    # print(words)
     command_name = words[0]
     command_amount = int(words[1])
     print(command_name, command_amount)
+    if command_name == "forward":
+        horizontal_position += command_amount
+    elif command_name == "down":
+        depth += command_amount
+    elif command_name == "up":
+        depth -= command_amount
+    else:
+        print("unknown command ", command_name)
+    print(horizontal_position, depth)
 
 
 print("Result:")
