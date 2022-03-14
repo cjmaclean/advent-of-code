@@ -11,7 +11,13 @@ depth = 0
 
 for line in lines:
     # read command and adjust position
-    print(line)
+    # print(line)
+    words = line.split()
+    print(words)
+    command_name = words[0]
+    command_amount = int(words[1])
+    print(command_name, command_amount)
+
 
 print("Result:")
 print(horizontal_position * depth)
