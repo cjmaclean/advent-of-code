@@ -27,7 +27,7 @@ for line in lines:
         aim -= command_amount
     else:
         print("unknown command ", command_name)
-    print(horizontal_position, depth, aim)
+    #print(horizontal_position, depth, aim)
 
 
 print("Result:")
