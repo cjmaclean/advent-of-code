@@ -33,11 +33,30 @@ for line in lines:
         
     first_line = False
 
-print("Result:")
-print("...")
+epsilon = 0
+gamma = 0
+
 for index,counters_here in enumerate(counters):
     counter_0 = counters_here["0"]
     counter_1 = counters_here["1"]
-    print("index:",index)
-    print("0's:",counter_0)
-    print("1's:",counter_1)
+    # last digit is digit 0, calculate digit number
+    digit_number = len(counters) - 1 - index
+    digit_multiplier = 2 ** digit_number
+
+    if counter_0 > counter_1:
+        epsilon += digit_multiplier
+    elif counter_1 > counter_0:
+        gamma += digit_multiplier
+    else:
+        print("warning, neither is greater")
+    # print("digit_multiplier",digit_multiplier)
+
+
+print("Result:", epsilon, "*", gamma, "=", gamma * epsilon)
+
+for index,counters_here in enumerate(counters):
+    counter_0 = counters_here["0"]
+    counter_1 = counters_here["1"]
+    # print("index:",index)
+    # print("0's:",counter_0)
+    # print("1's:",counter_1)
